@@ -1,10 +1,28 @@
-import { Box, Container } from "@mui/material";
+import { Box } from "@mui/material";
 
 function Home() {
   return (
-    <Container disableGutters sx={{ position: "relative", height: "100vh" }}>
+    <Box
+      sx={{
+        position: "relative",
+        width: "100%",
+        height: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       {/* Hero Background */}
-      <picture className="absolute inset-0 w-full h-full">
+      <Box
+        component="picture"
+        sx={{
+          position: "absolute",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+          opacity: 0.5,
+        }}
+      >
         <source
           media="(max-width: 767px)"
           srcSet={"/images/mihrab-hero-480.png"}
@@ -21,9 +39,10 @@ function Home() {
           media="(min-width: 1440px)"
           srcSet={"/images/mihrab-hero-1440.png"}
         />
+
         <Box
           component="img"
-          src="/images/mihrab-hero-480.png"
+          src="/images/mihrab-hero-1920.png"
           alt="mihrab hero background"
           sx={{
             display: "block",
@@ -32,8 +51,8 @@ function Home() {
             height: "100%",
           }}
         />
-      </picture>
-    </Container>
+      </Box>
+    </Box>
   );
 }
 export default Home;
