@@ -2,7 +2,10 @@ import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
   palette: {
-    main: "#1a5276",
+    main: "#BEA263",
+    secondary: {
+      main: "#21593A",
+    },
   },
   border: {
     light: "#DDC178",
@@ -14,6 +17,7 @@ const theme = createTheme({
     linen: "#F5EFE2",
     button: {
       light: "#255F3B",
+      main: "#21593A",
       dark: "#205838",
     },
   },
