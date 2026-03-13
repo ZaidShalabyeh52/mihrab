@@ -23,7 +23,8 @@ const theme = createTheme({
     button: "linear-gradient(to left, #255F3B, #205838)",
   },
   typography: {
-    fontFamily: '"Roboto", "Helvetica Neue", Arial, sans-serif',
+    fontFamily:
+      '"Amiri" ,"Cairo", "Roboto", "Helvetica Neue", Arial, sans-serif',
   },
 });
 
