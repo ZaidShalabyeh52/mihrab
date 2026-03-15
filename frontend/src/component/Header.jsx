@@ -10,6 +10,39 @@ const links = [
   { name: "الرئيسية", path: "/", key: "home" },
 ];
 
+const linkSx = {
+  textDecoration: "none",
+  position: "relative",
+  display: "flex",
+  alignItems: "center",
+  mt: 1.5,
+  color: (theme) =>
+    pathname === link.path ? theme.palette.secondary.main : theme.palette.main,
+  fontSize: { xs: "1.2rem", md: "1.45rem" },
+  fontWeight: 700,
+  px: 2.5,
+  py: 0.5,
+  transition: "all 0.3s ease",
+
+  "&:hover": {
+    color: (theme) => theme.palette.secondary.main,
+    textShadow: (theme) => `0 0 8px ${theme.palette.secondary.main}40`,
+  },
+
+  ...(index !== links.length - 1 && {
+    "&::before": {
+      content: '""',
+      position: "absolute",
+      right: 0,
+      top: "50%",
+      transform: "translateY(-50%)",
+      height: "50%",
+      width: "1px",
+      bgcolor: (theme) => theme.border.main,
+    },
+  }),
+};
+
 export default function Header() {
   const { pathname } = useLocation();
 
@@ -59,41 +92,7 @@ export default function Header() {
               component={RouterLink}
               key={link.key}
               to={link.path}
-              sx={{
-                textDecoration: "none",
-                position: "relative",
-                display: "flex",
-                alignItems: "center",
-                mt: 1,
-                color: (theme) =>
-                  pathname === link.path
-                    ? theme.palette.secondary.main
-                    : theme.palette.main,
-                fontSize: { xs: "1.2rem", md: "1.45rem" },
-                fontWeight: 700,
-                px: 2.5,
-                py: 0.5,
-                transition: "all 0.3s ease",
-
-                "&:hover": {
-                  color: (theme) => theme.palette.secondary.main,
-                  textShadow: (theme) =>
-                    `0 0 8px ${theme.palette.secondary.main}40`,
-                },
-
-                ...(index !== links.length - 1 && {
-                  "&::before": {
-                    content: '""',
-                    position: "absolute",
-                    right: 0,
-                    top: "50%",
-                    transform: "translateY(-50%)",
-                    height: "50%",
-                    width: "1px",
-                    bgcolor: (theme) => theme.border.main,
-                  },
-                }),
-              }}
+              sx={linkSx}
             >
               {link.name}
             </MuiLink>
