@@ -1,6 +1,6 @@
 import { AppBar, Container, Box, Link as MuiLink } from "@mui/material";
 import logo from "/images/mihrab-logo.png";
-import { LoginButton, SignupButton } from "./buttons/AuthButtons";
+import AuthButton from "./buttons/AuthButton";
 import { Link as RouterLink, useLocation } from "react-router-dom";
 
 const links = [
@@ -10,7 +10,7 @@ const links = [
   { name: "الرئيسية", path: "/", key: "home" },
 ];
 
-const linkSx = {
+const getLinkSx = (pathname, link, index) => ({
   textDecoration: "none",
   position: "relative",
   display: "flex",
@@ -41,7 +41,7 @@ const linkSx = {
       bgcolor: (theme) => theme.border.main,
     },
   }),
-};
+});
 
 export default function Header() {
   const { pathname } = useLocation();
@@ -75,8 +75,7 @@ export default function Header() {
         }}
       >
         <Box sx={{ display: "flex", gap: 2 }}>
-          <LoginButton />
-          <SignupButton />
+          <AuthButton />
         </Box>
 
         <Box
@@ -92,7 +91,7 @@ export default function Header() {
               component={RouterLink}
               key={link.key}
               to={link.path}
-              sx={linkSx}
+              sx={getLinkSx(pathname, link, index)}
             >
               {link.name}
             </MuiLink>
