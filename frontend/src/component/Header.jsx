@@ -52,6 +52,7 @@ export default function Header() {
       sx={{
         display: "flex",
         alignItems: "center",
+
         background: (theme) => theme.gradients.background,
         height: { xs: "auto", md: 75 },
         "&::after": {
@@ -97,7 +98,7 @@ export default function Header() {
             </MuiLink>
           ))}
 
-          <img src={logo} alt="Mihrab Logo" height={70} />
+          <img src={logo} alt="Mihrab Logo" className="m-0 w-20 h-16" />
         </Box>
       </Container>
     </AppBar>

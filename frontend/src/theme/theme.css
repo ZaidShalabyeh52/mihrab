@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --color-green: #00ff00;
+}
+
+* {
+  margin: 0;
+}
