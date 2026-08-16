@@ -6,6 +6,7 @@ import App from "./App.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import theme from "./theme/Theme.js";
 import Header from "./component/Header.jsx";
+import ControlPanel from "./component/ControlPanel.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById("root")).render(
       <Router>
         <Header />
         <Routes>
+          <Route path="/control-panel" element={<ControlPanel />} />
           <Route path="/*" element={<App />} />
         </Routes>
       </Router>

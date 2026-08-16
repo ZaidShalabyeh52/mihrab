@@ -6,7 +6,7 @@ import { Link as RouterLink, useLocation } from "react-router-dom";
 const links = [
   { name: "تواصل معنا", path: "/contact", key: "contact" },
   { name: "عن المنصة", path: "/about", key: "about" },
-  { name: "الخدمات", path: "/services", key: "services" },
+  { name: "لوحة التحكم", path: "/control-panel", key: "controlPanel" },
   { name: "الرئيسية", path: "/", key: "home" },
 ];
 
