@@ -20,9 +20,20 @@
   --color-button-dark: #205838;
 
   /* gradients */
-  --bg-gradient-bg: linear-gradient(to left, #f8efe4, #f5efe2);
-  --bg-gradient-button: linear-gradient(to left, #255f3b, #205838);
-  --bg-gradient-gold: linear-gradient(to left, #ddc178, #bea263, #b89964);
+
+  --background-image-gradient-bg: linear-gradient(to left, #f8efe4, #f5efe2);
+
+  --background-image-gradient-button: linear-gradient(
+    to left,
+    #255f3b,
+    #205838
+  );
+  --background-image-gradient-gold: linear-gradient(
+    to left,
+    #ddc178,
+    #bea263,
+    #b89964
+  );
 }
 
 body {
