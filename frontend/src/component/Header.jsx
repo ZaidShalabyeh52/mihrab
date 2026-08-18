@@ -1,6 +1,6 @@
 import { AppBar, Container, Box, Link as MuiLink } from "@mui/material";
 import logo from "/images/mihrab-logo.png";
-import AuthButton from "./buttons/AuthButton";
+import GreenButton from "./buttons/GreenButton";
 import { Link as RouterLink, useLocation } from "react-router-dom";
 
 const links = [
@@ -76,7 +76,7 @@ export default function Header() {
         }}
       >
         <Box sx={{ display: "flex", gap: 2 }}>
-          <AuthButton />
+          <GreenButton text=" تسجيل الدخول / إنشاء الحساب" link="auth" />
         </Box>
 
         <Box

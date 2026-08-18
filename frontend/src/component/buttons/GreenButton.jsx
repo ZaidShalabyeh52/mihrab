@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 
-const authButtonSx = {
+const ButtonSx = {
   background: (theme) =>
     `${theme.gradients.button} padding-box, ${theme.gradients.gold} border-box`,
   border: "4px solid transparent",
@@ -13,11 +13,10 @@ const authButtonSx = {
   whiteSpace: "nowrap",
 };
 
-export default function AuthButton({}) {
+export default function GreenButton({ text, link }) {
   return (
-    <Button sx={authButtonSx} component={RouterLink} to="/auth">
-      {" "}
-      تسجيل الدخول / إنشاء الحساب
+    <Button sx={ButtonSx} component={RouterLink} to={"/" + link}>
+      {text}
     </Button>
   );
 }
