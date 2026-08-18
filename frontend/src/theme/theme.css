@@ -36,6 +36,10 @@
   );
 }
 
+.middle {
+  @apply flex justify-center items-center;
+}
+
 body {
   font-family: "Amiri", "Cairo", "Roboto", "Helvetica Neue", Arial, sans-serif;
 }
