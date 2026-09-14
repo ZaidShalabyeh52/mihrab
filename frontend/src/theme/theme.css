@@ -40,6 +40,10 @@
   @apply flex justify-center items-center;
 }
 
+.cairo {
+  font-family: "Cairo", "Amiri", "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+
 body {
   font-family: "Amiri", "Cairo", "Roboto", "Helvetica Neue", Arial, sans-serif;
 }

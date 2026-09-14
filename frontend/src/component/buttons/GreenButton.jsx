@@ -7,15 +7,18 @@ const ButtonSx = {
   border: "4px solid transparent",
   borderRadius: "8px",
   color: "#fff",
-  fontSize: { xs: "0.8rem", md: "1.125rem" },
+  fontSize: "1rem",
   width: { xs: "150px", md: "220px" },
   textTransform: "none",
   whiteSpace: "nowrap",
+  minWidth: "fit-content",
+  fontFamily: "Cairo, Amiri, Roboto, Helvetica Neue, Arial, sans-serif",
+  width: "100%",
 };
 
-export default function GreenButton({ text, link }) {
+export default function GreenButton({ text, link, sx }) {
   return (
-    <Button sx={ButtonSx} component={RouterLink} to={"/" + link}>
+    <Button sx={{ ...ButtonSx, ...sx }} component={RouterLink} to={"/" + link}>
       {text}
     </Button>
   );
